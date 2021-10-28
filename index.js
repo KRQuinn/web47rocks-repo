@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000
 
 app.get('/', (req, res) => {
     res.send(`
-        <h1>Web 47 rocks!</h1>
+        <h1>Web ${process.env.COHORT} rocks!</h1>
     `)
 })
 
@@ -17,6 +17,8 @@ app.get('/port', (req, res) => {
         <div>port is ${PORT}</div>
     `)
 })
+
+
 
 app.listen(PORT, () => {
         console.log(`listening on ${PORT}`)
